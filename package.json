@@ -1,0 +1,24 @@
+{
+  "name": "somalisocial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm run start --prefix server",
+    "start": "npm run server | npm run client",
+    "watch": "npm run build --prefix client | npm run watch --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mustafaa4A/social-media-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mustafaa4A/social-media-app/issues"
+  },
+  "homepage": "https://github.com/Mustafaa4A/social-media-app#readme"
+}
