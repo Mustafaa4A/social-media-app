@@ -2,16 +2,23 @@ import mongoose from "mongoose";
 
 const postSchema = mongoose.Schema(
   {
-    userId: {
-      type: String,
+    user: {
+      type: Object,
       required: true,
     },
     location: String,
     description: String,
-    picturePath: String,
+    picturePath: {
+      type: String,
+      default : ''
+    },
     likes: {
-      type: Map,
-      of: Boolean,
+      type: Object,
+      default:{}
+    }, 
+    comments: {
+      type: Object,
+      default:{}
     }
   },
   { timestamps: true }

@@ -30,11 +30,19 @@ const UserSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      min: 5,
+      min: 5
     },
     picturePath: {
       type: String,
       default: "",
+    },
+    sendedRequests: {
+      type: Array,
+      default: [],
+    },
+    recievedRequests: {
+      type: Array,
+      default: [],
     },
     friends: {
       type: Array,
