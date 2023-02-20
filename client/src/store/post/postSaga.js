@@ -18,14 +18,12 @@ function* loadPosts({payload}) {
 
 function* savePost({ payload }) {
   try {
-    console.log(payload);
-    
     const response = yield call(addPost, payload);
     if (yield response.status !== 201) {
       const { error } = yield response.json();
       console.log(error);
     }
-    yield put(LOAD_POST_START());
+    yield put(LOAD_POST_START({token:payload.token}));
   } catch (error) {
     console.error(error)
   }

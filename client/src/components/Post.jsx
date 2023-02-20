@@ -68,7 +68,7 @@ const Post = ({ post }) => {
         <p>{ description }</p>
       </div>
       <div className="image">
-        <img src={picturePath && picturePath} alt="" />
+        {picturePath && <img src={picturePath} alt="" />}
       </div>
       <hr />
       <div className="footer flex justify-around bg-gray-100">

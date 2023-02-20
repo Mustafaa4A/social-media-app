@@ -92,10 +92,11 @@ const Navbar = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHViGfE9kzwDehCPiY7yQheC7Uwa_age3sdg&usqp=CAU"
             onClick={(e) => setOpen(true)}
           /> */}
-            <UserAvator size={30} onClick={(e) => setOpen(true)} />
+            <UserAvator img={user?.picturePath} size={30} onClick={(e) => setOpen(true)} />
         </Icons>
-        <UserBox onClick={(e) => setOpen(true)}>
-          <UserAvator size={30} onClick={(e) => setOpen(true)} />
+          <UserBox onClick={(e) => setOpen(true)}>
+            
+          <UserAvator img={user?.picturePath} size={30} onClick={(e) => setOpen(true)} />
           <Typography variant="span">{user?.username}</Typography>
         </UserBox>
       </StyledToolbar>

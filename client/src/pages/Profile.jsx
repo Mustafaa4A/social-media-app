@@ -48,7 +48,7 @@ const Profile = () => {
       </div>
       <div className="w-[100%] bg-white p-1 py-11 flex flex-col md:w-[600px] m-auto">
         <div className='m-auto text-center'>
-          <UserAvator size={150}/>
+          <UserAvator img={loggedInUser.picturePath} size={150}/>
           <h1 className="text-2xl font-bold mt-2">{`${user?.firstName} ${user?.lastName}`}</h1>
           <h3 className='mb-3 text-md font-bold'>{ user?.username || "No Username"}</h3>
         </div>
@@ -63,16 +63,10 @@ const Profile = () => {
         {
           (loggedInUser?.username === user?.username && !loggedInUser.friends?.includes(user._id)) &&
           <div className='mt-3 flex'>
-            {/* {
-              user.sendRequests.includes(loggedInUser._d) ? (
-              <button className="bg-[#999] block profile-btn  w-[100%]" onClick={""}></button>
-            ) : (
-                <button className="bg-[blue] block profile-btn  w-[100%]" onClick={""}></button>
-              )
-            } */}
+            
           </div>
         }
-
+        
         <div className='flex'>
           <button className="bg-[#6d6de7] w-[50%] profile-btn" onClick={()=>acceptRequest(user._id)}>Confirm Request</button>
           <button className="bg-[#999]  w-[50%] profile-btn">Delete Request</button>

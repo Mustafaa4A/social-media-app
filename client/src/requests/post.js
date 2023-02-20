@@ -1,6 +1,7 @@
 const URL = 'http://localhost:3300';
 
-export const getPosts = async ({token}) => {
+export const getPosts = async ({ token }) => {
+  console.log(token);
   const response = fetch(`${URL}/posts`, {
     headers: {
       Authorization:`Bearer ${token}`

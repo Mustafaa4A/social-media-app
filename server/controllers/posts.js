@@ -6,6 +6,12 @@ import { findUser } from "./users.js";
 export const createPost = async (req, res) => {
   try {
     const { userId, description, picturePath } = await req.body;
+
+    if (!picturePath) {
+      picturePath = '';
+    }
+
+
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ error: 'Invalid user ID' });
     const newPost = new Post({
